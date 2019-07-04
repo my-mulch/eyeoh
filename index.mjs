@@ -10,10 +10,8 @@ export default class Myio {
 
         xhr.onload = function () {
             const imgtag = document.createElement('img')
-            imgtag.onload = function () { URL.revokeObjectURL(imgtag.src) }
+            imgtag.onload = function () { imread.data = new Image(imgtag) }
             imgtag.src = URL.createObjectURL(this.response)
-            
-            console.log(new Image(imgtag))
         }
 
         xhr.send()
