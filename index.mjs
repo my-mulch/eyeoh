@@ -10,7 +10,7 @@ export default class Myio {
 
         xhr.onload = function () {
             const imgtag = document.createElement('img')
-            imgtag.onload = function () { imread.data = new Image(imgtag) }
+            imgtag.onload = function () { imread.data = new Image(imgtag) }.bind(Myio)
             imgtag.src = URL.createObjectURL(this.response)
         }
 
