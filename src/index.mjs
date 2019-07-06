@@ -1,7 +1,7 @@
 import MyIOSocket from './sources'
 import MyIODragDrop from './sources'
 
-export default class MyIO extends Array {
+class MyIO extends Array {
     constructor() {
         super()
 
@@ -38,6 +38,8 @@ export default class MyIO extends Array {
 
         canvas.remove()
         imgtag.remove()
+
+        return image
     }
 
 }
