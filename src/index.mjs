@@ -16,10 +16,9 @@ class MyIO extends Array {
     }
 
     async imread(path) {
-        const imageBlob = this.load(path)
+        const imageBlob = await this.load(path)
         const bitmap = await createImageBitmap(imageBlob)
 
-        const imgtag = document.createElement('img')
         const canvas = document.createElement('canvas')
         const context = canvas.getContext('2d')
         const region = [0, 0, bitmap.width, bitmap.height]
@@ -37,7 +36,6 @@ class MyIO extends Array {
         this.push(image)
 
         canvas.remove()
-        imgtag.remove()
 
         return image
     }
