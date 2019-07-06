@@ -1,5 +1,5 @@
-import MyIOSocket from './sources'
-import MyIODragDrop from './sources'
+import MyIOSocket from './sources/socket'
+import MyIODragDrop from './sources/dragdrop'
 
 class MyIO extends Array {
     constructor() {
