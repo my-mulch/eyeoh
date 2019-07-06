@@ -1,8 +1,7 @@
 
-export default class ParmesanFileDrop {
-    constructor(options) {
+export default class MyIODragDrop {
+    constructor() {
         this.target = document.querySelector('canvas')
-        this.export = options.export
 
         this.read = this.read.bind(this)
         this.ignore = this.ignore.bind(this)
@@ -21,6 +20,6 @@ export default class ParmesanFileDrop {
 
         Object
             .values(event.dataTransfer.files)
-            .forEach(this.export)
+            .forEach(this.route)
     }
 }
