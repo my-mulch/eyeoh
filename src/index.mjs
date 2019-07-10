@@ -1,7 +1,7 @@
 import bb from 'big-box'
 
 export default class MyIO {
-    async static imread(path) {
+    static async imread(path) {
         const response = await fetch(path)
         const imageBlob = await response.blob()
         const bitmap = await createImageBitmap(imageBlob)
