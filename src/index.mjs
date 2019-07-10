@@ -22,6 +22,6 @@ export default class MyIO {
 
         canvas.remove()
 
-        return image
+        return { image, bitmap }
     }
 }
